@@ -1,0 +1,14 @@
+<template>
+    <div class="slds-box">
+        <c-account-filter onfilter={handleCases}></c-account-filter>
+    </div>
+    <lightning-tabset variant="scoped" active-tab-value="two">
+        <lightning-tab label="Case Gallery" value="one">
+            <c-case-gallery></c-case-gallery>
+        </lightning-tab>
+        <lightning-tab label="Case Grid" value="two">
+            <c-case-grid case-list = {caseList} onselect={handleClick}></c-case-grid>
+        </lightning-tab>
+       
+    </lightning-tabset>
+</template>

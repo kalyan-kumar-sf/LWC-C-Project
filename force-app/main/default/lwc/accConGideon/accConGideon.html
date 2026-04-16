@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Gideon Task">
+        <!-- account id dispatched from this comp -->
+        <c-account-gideon onaccount={handleAccount}></c-account-gideon> 
+    <div class="slds-table">
+        <!-- sending account id from accountGideon to show account detail gideon child of account gideon -->
+        <c-show-account-detail-gideon account-id={accountId}></c-show-account-detail-gideon> 
+        <c-contact-details-gideon account-id={accountId}></c-contact-details-gideon>
+    </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,20 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Hello" icon-name="standard:account">
+        <lightning-button-icon  icon-name="utility:delete" variant="border-filled" 
+        alternative-text="Delete Record" slot="actions"
+        onclick={handleClick}
+        >
+        </lightning-button-icon>
+        
+        <lightning-datatable
+        key-field="id"
+        data={wiredAccounts.data}
+        show-row-number-column
+        columns={columnsList}
+        max-row-selection="1"
+        onrowselection={handleRowSelection}
+        >
+    </lightning-datatable>
+    </lightning-card>
+    
+</template>

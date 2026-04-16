@@ -1,0 +1,22 @@
+<template>
+    <div>
+    <lightning-card title="Search Account">
+        <lightning-input type="text" label="Enter Account Name" placeholder="Search account here" onchange={handleSearch} class="slds-p-around_medium"></lightning-input>
+        <template lwc:if={hasRecords}>
+            <div class="slds-p-horizontal_medium">
+                <lightning-datatable
+                    key-field="id"
+                    data={accountList}
+                    hide-checkbox-column
+                    columns={columnsList}>
+                </lightning-datatable>
+            </div>
+        </template>
+        <template lwc:else>
+            <div class="slds-align_absolute-center">
+                    No records found
+            </div>
+        </template>
+    </lightning-card>
+    </div>
+</template>

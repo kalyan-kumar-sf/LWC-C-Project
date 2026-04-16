@@ -1,0 +1,27 @@
+<template>
+    <div class="slds-box">
+        <lightning-card title="Contact Detail">
+            <lightning-button-group  slot="actions">
+                <lightning-button label="email"></lightning-button>
+                <lightning-button label="edit" onclick={editContact}></lightning-button>
+                <lightning-button label="view" onclick={viewContact}></lightning-button>
+            </lightning-button-group>
+        <lightning-record-view-form
+                    record-id={contactId}
+                    object-api-name="Contact">
+            <div class="slds-box slds-theme_default">
+                <lightning-output-field field-name="Name"></lightning-output-field>
+                <lightning-output-field field-name="Phone"></lightning-output-field>
+                <lightning-output-field field-name="Email"></lightning-output-field>
+                <lightning-output-field field-name="Birthdate"></lightning-output-field>
+                <lightning-output-field field-name="LeadSource"></lightning-output-field>
+            </div>
+            <div class="slds-box slds-theme_default">
+                <lightning-output-field field-name={city}></lightning-output-field>
+                <lightning-output-field field-name={country}></lightning-output-field>
+            </div>
+        </lightning-record-view-form>
+        <c-contact-map-demo contact-id={contactId}></c-contact-map-demo>
+        </lightning-card>
+    </div>
+</template>

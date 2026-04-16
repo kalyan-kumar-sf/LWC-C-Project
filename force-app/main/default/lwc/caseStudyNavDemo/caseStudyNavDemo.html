@@ -1,0 +1,16 @@
+<template>
+    <div class="slds-box">
+        Case Study Navigation
+    <lightning-vertical-navigation onselect={handleNavs}>
+        <lightning-vertical-navigation-section label="Browse">
+            <lightning-vertical-navigation-item label="Contacts" name="contact"></lightning-vertical-navigation-item>
+            <lightning-vertical-navigation-item label="Calculator" name="calc"></lightning-vertical-navigation-item>
+            <lightning-vertical-navigation-item label="Report" name="report"></lightning-vertical-navigation-item>
+        </lightning-vertical-navigation-section>
+        <lightning-vertical-navigation-section label="Deals">
+            <lightning-vertical-navigation-item label="All Deals" name="deals"></lightning-vertical-navigation-item>
+            <lightning-vertical-navigation-item label="Deal Graph" name="graph"></lightning-vertical-navigation-item>
+        </lightning-vertical-navigation-section>
+    </lightning-vertical-navigation>
+    </div>
+</template>

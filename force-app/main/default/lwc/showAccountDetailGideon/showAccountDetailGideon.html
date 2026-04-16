@@ -1,0 +1,25 @@
+<template>
+    <div class="slds-p-around_medium">
+        <template lwc:if={account}>
+        <table class="slds-table slds-table_bordered slds-table_col-bordered slds-table_striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Industry</th>
+                    <th>Annual Revenue</th>
+                    <th>Rating</th>
+                </tr>
+                
+            </thead>
+            <tbody>                    
+                    <tr>
+                        <td>{account.Name}</td>
+                        <td>{account.Industry}</td>
+                        <td>{account.AnnualRevenue}</td>
+                        <td>{account.Rating}</td>
+                    </tr>
+            </tbody>
+        </table>
+        </template>
+    </div>
+</template>

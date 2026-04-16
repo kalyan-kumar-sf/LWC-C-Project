@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Simple Calculator">
+        <lightning-button-group slot="actions">
+            <lightning-button label="Addition" onclick={add}></lightning-button>
+            <lightning-button label="Subtraction" onclick={sub}></lightning-button>
+            <lightning-button label="Multiplication" onclick={mult}></lightning-button>
+            <lightning-button label="Division" onclick={div}></lightning-button>
+        </lightning-button-group>
+
+        <lightning-input onblur={handleBlurFirstNumber} type="number" label="First Number" value={firstNumber}></lightning-input>
+        <lightning-input onblur={handleBlurSecondNumber} type="number" label="Second Number" value={secondNumber}></lightning-input>
+        <template lwc:if={showResult}>
+        Result : <lightning-badge label={result} class = "slds-theme_error"></lightning-badge>
+        <!-- <lightning-badge label="Alpha"></lightning-badge> -->
+         </template>
+    </lightning-card>
+
+    <!-- <lightning-card title="Simple Calculator">
+        <lightning-button slot="actions" variant="brand" label="Addition" onclick={add}></lightning-button>
+        <lightning-button slot="actions" variant="brand" label="Subtraction" onclick={sub}></lightning-button>
+        <lightning-button slot="actions" variant="brand" label="Multiplication" onclick={mult}></lightning-button>
+        <lightning-button slot="actions" variant="brand" label="Division" onclick={div}></lightning-button>
+    </lightning-card> -->
+
+</template>

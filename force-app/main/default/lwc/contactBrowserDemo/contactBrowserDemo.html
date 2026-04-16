@@ -1,0 +1,14 @@
+<template>
+    <div class="slds-box">
+        Browser
+        <c-account-filter-demo onselect={handleAccountId}></c-account-filter-demo>
+        <lightning-tabset variant="standard" active-tab-value="two">
+            <lightning-tab label="Gallery" value="one">
+                <c-contact-gallery-demo contact-list={contactList} oncontactclick={handleContact}></c-contact-gallery-demo>
+            </lightning-tab>
+            <lightning-tab label="Grid" value="two">
+                <c-contact-grid-demo con-list={contactList} oncontactclick={handleContact}></c-contact-grid-demo>
+            </lightning-tab>
+        </lightning-tabset>
+    </div>
+</template>

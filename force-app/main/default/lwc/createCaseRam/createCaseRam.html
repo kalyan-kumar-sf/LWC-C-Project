@@ -1,0 +1,19 @@
+<template>
+    <div>
+        <lightning-input label=" Enter Subject" placeholder="type here subject here..."></lightning-input>
+        <lightning-input label="Description" placeholder="type here subject here..."></lightning-input>
+        <lightning-combobox
+            label="Priority"
+            value={priority}
+            options={statusOptions}
+            onchange={handlePriority} ></lightning-combobox>
+        <lightning-combobox
+            label="Status"
+            value={status}
+            options={priorityOptions}
+            onchange={handleStatus} ></lightning-combobox>
+            
+            <lightning-button label="Save" onclick={handleClick}></lightning-button>
+
+    </div>
+</template>

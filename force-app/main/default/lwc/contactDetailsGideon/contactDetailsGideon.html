@@ -1,0 +1,30 @@
+<template>
+<div class="slds-p-around_medium">
+        <template lwc:if={consGreater}>
+        <table class="slds-table slds-table_bordered slds-table_col-bordered slds-table_striped">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
+                
+            </thead>
+            <tbody> 
+                <template for:each={contactList} for:item="obj">                   
+                    <tr key={obj.Id}>
+                        <td>{obj.FirstName}</td>
+                        <td>{obj.LastName}</td>
+                        <td>{obj.Email}</td>
+                        <td>{obj.Phone}</td>
+                    </tr>
+                    </template>
+            </tbody>
+        </table>
+        </template>
+        <template lwc:else>
+            There is no contacts for this account
+        </template>
+    </div>
+</template>

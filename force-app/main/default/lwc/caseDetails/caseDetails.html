@@ -1,0 +1,18 @@
+<template>
+<lightning-record-view-form
+            record-id={caseId}
+            object-api-name="Case">
+    <div class="slds-box slds-theme_default">
+         <!-- <lightning-messages> </lightning-messages> -->
+        <lightning-output-field field-name="ContactId"></lightning-output-field>
+        <lightning-output-field field-name="Id"></lightning-output-field>
+        <lightning-output-field field-name="Priority"></lightning-output-field>
+        <lightning-output-field field-name="Reason"></lightning-output-field>
+    </div>
+    <!-- <div class="slds-box slds-theme_default">
+        <lightning-output-field field-name={city}></lightning-output-field>
+        <lightning-output-field field-name={country}></lightning-output-field>
+    </div> -->
+</lightning-record-view-form>
+<c-case-map case-id={caseId}></c-case-map>
+</template>

@@ -1,0 +1,28 @@
+<template>
+<div class="slds-box">
+        <table class="slds-table slds-table_bordered slds-table_col-bordered slds-table_striped">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <template for:each={conList} for:item="obj">
+                <!-- 
+                    Define a custome attribute to pass data to the handler
+                    use data-<attribute-name> format
+                 -->
+                <tr key={obj.Id} onclick={handlerClick} data-conid={obj.Id}>
+                    <td>{obj.FirstName}</td>
+                    <td>{obj.LastName}</td>
+                    <td>{obj.Email}</td>
+                    <td>{obj.Phone}</td>
+                </tr>
+            </template>
+        </tbody>
+    </table>
+    </div>
+</template>

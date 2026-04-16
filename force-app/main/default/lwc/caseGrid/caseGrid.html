@@ -1,0 +1,27 @@
+<template>
+<div class="slds-box">
+        <table class="slds-table slds-table_bordered slds-table_col-bordered slds-table_striped">
+        <thead>
+            <tr>
+                <th>Contact Id</th>
+                <th>Subject</th>
+                <th>Status</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <template for:each={caseList} for:item="obj">
+                <!-- 
+                    Define a custome attribute to pass data to the handler
+                    use data-<attribute-name> format
+                 -->
+                <tr key={obj.Id} onclick={handlerClick} data-caseid={obj.Id}>
+                    <td>{obj.ContactId}</td>
+                    <td>{obj.Subject}</td>
+                    <td>{obj.Status}</td>
+                </tr>
+            </template>
+        </tbody>
+    </table>
+    </div>
+</template>
